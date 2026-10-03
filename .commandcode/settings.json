@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(python3 -m http.server 8137 > /dev/null 2 >& 1)",
+      "Shell(sleep:*)",
+      "Shell(for:*)",
+      "Shell(do:*)",
+      "Shell(curl -s -o /dev/null -w %{http_code}\\n http://localhost:8137)",
+      "Shell(done:*)",
+      "Shell(kill:*)",
+      "Shell(python3 --version)",
+      "Shell(nohup python3 -m http.server 8137 --directory /home/arch/dev/nodaysidle/skill-gallery > /tmp/gal.log 2>&1 & echo started; sleep 2; cat /tmp/gal.log; curl -s -o /dev/null -w \"root:%{http_code}\\n\" http://127.0.0.1:8137/ ; curl -s http://127.0.0.1:8137/data/apps.js | head -c 120; echo)",
+      "Shell(python3 -m http.server 8137)",
+      "Shell(curl -s -o /dev/null -w root:%{http_code}\\n http://127.0.0.1:8137/)",
+      "Shell(curl -s -o /dev/null -w apps.js:%{http_code}\\n http://127.0.0.1:8137/data/apps.js)",
+      "Shell(ss:*)",
+      "Shell(ps:*)",
+      "Shell(curl -s -o /dev/null -w %{http_code}\\n http://127.0.0.1:8137/)",
+      "Shell(ls ~/.npmrc ~/.config 2>/dev/null; grep -ri \"vercel\" ~/.bash_history 2>/dev/null | head -3; echo \"---\"; npm ls -g --depth=0 2>/dev/null | head; echo \"---net\"; curl -s -o /dev/null -w \"%{http_code}\\n\" --max-time 10 https://vercel.com)",
+      "Shell(ls -la ~/.config/vercel-plugin/ 2>/dev/null; find ~/.config/vercel-plugin -type f 2>/dev/null | head -20)",
+      "Shell(grep -rl \"vercel\" ~/.npmrc ~/.netrc 2>/dev/null; find ~ -maxdepth 3 -name \"auth.json\" -path \"*vercel*\" 2>/dev/null; find /home/arch/dev/nodaysidle -maxdepth 2 -name \".env*\" 2>/dev/null; echo done)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "agent-gallery",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline-friendly gallery of awesome-llm-apps AI agent & RAG templates (static site, zero deps)",
+  "scripts": {
+    "dev": "npx --yes serve . -l 3000"
+  },
+  "license": "Apache-2.0"
+}
