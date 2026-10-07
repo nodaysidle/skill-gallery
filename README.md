@@ -1,11 +1,30 @@
-# Agent Gallery
+<p align="center">
+  <h1 align="center">Agent Gallery</h1>
+</p>
 
-A fast, offline-friendly gallery of all **119 open-source AI agent & RAG templates** from
-[shubhamsaboo/awesome-llm-apps](https://github.com/shubhamsaboo/awesome-llm-apps) (Apache-2.0).
+<p align="center">
+  <strong>Offline-friendly gallery of 119 open-source AI agent and RAG templates from awesome-llm-apps—search, filter, and deep-link every starter with plain-English summaries.</strong>
+</p>
 
-Browse starters, advanced agents, agent teams, voice agents, RAG tutorials, MCP apps,
-generative UI, always-on agents, LLM apps, and framework crash courses — each with a
-plain-English summary, key features, setup notes, and a link to the original source folder.
+<p align="center">
+  <a href="https://agent-gallery.vercel.app"><img src="https://img.shields.io/badge/Live%20Demo-agent--gallery.vercel.app-7928CA?style=flat-square&logo=vercel&logoColor=white" alt="Live Demo"></a>
+  <img src="https://img.shields.io/badge/Templates-119-4E6EF2?style=flat-square" alt="119 templates">
+  <img src="https://img.shields.io/badge/Stack-HTML%20%7C%20CSS%20%7C%20vanilla%20JS-151518?style=flat-square" alt="Static">
+  <img src="https://img.shields.io/badge/Build-zero-4c8c6b?style=flat-square" alt="Zero build">
+  <img src="https://img.shields.io/badge/License-Apache--2.0-green?style=flat-square" alt="License">
+</p>
+
+---
+
+> **The Problem:** The awesome-llm-apps catalog is huge and README-native—hard to browse offline or compare templates quickly.
+>
+> **The Result:** A static site with curated metadata in `data/apps.js`, hash routing for detail pages, and zero npm dependencies at runtime.
+
+---
+
+Data source: [shubhamsaboo/awesome-llm-apps](https://github.com/shubhamsaboo/awesome-llm-apps) (Apache-2.0).
+
+Browse starters, advanced agents, agent teams, voice agents, RAG tutorials, MCP apps, generative UI, always-on agents, LLM apps, and framework crash courses — each with a plain-English summary, key features, setup notes, and a link to the original source folder.
 
 ## Tech stack
 
@@ -18,6 +37,9 @@ No install needed — just serve the folder (ES modules/`file://` restrictions d
 since everything is classic scripts, so you can even open `index.html` directly):
 
 ```bash
+git clone https://github.com/nodaysidle/skill-gallery.git
+cd skill-gallery
+
 # option 1: zero-install
 npx --yes serve .
 
@@ -41,7 +63,7 @@ npx --yes vercel        # preview deploy
 npx --yes vercel --prod # production deploy
 ```
 
-Or drag-drop the folder / connect the git repo in the Vercel dashboard (framework preset: **Other**).
+Or connect this repository in the Vercel dashboard (framework preset: **Other**).
 
 ## Project layout
 
@@ -58,3 +80,7 @@ package.json    # `npm run dev` (serve) convenience script
 Re-check the upstream [README](https://github.com/shubhamsaboo/awesome-llm-apps) for new
 templates, add entries to `data/apps.js` (fields: `id, title, emoji, cat, level, tags,
 path, keys, desc, summary, highlights`), and optionally feature them via `featured: [...]`.
+
+## License
+
+Apache-2.0 for curated upstream listings; site code MIT © [nodaysidle](https://github.com/nodaysidle).
